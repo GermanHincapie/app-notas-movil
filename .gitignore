@@ -1,0 +1,9 @@
+node_modules/
+.env
+build/
+.dart_tool/
+.gradle/
+android/.gradle/
+android/local.properties
+ios/Pods/
+*.log
