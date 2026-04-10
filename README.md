@@ -1,4 +1,4 @@
-\# 📝 App Notas Móvil – Aplicación con API REST y Persistencia Local
+# 📝 App Notas Móvil – Aplicación con API REST y Persistencia Local
 
 ## 📌 Descripción del proyecto
 
