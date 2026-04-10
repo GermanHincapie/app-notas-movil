@@ -1,116 +1,188 @@
-\# Aplicación móvil de gestión de notas
+\# 📝 App Notas Móvil – Aplicación con API REST y Persistencia Local
 
+## 📌 Descripción del proyecto
 
+Este proyecto corresponde al desarrollo de una aplicación móvil de notas que permite a los usuarios registrarse, iniciar sesión y gestionar sus notas personales mediante una **API REST**. La aplicación fue desarrollada utilizando **Flutter** como frontend y **Node.js + Express + MySQL** como backend.
 
-Este proyecto consiste en una aplicación móvil desarrollada en Flutter que permite gestionar notas mediante un API REST desarrollado en Node.js y una base de datos MySQL.
+Además, se implementó persistencia local con SQLite para permitir el acceso a las notas incluso cuando el dispositivo no tiene conexión a internet.
 
+---
 
+## 🎯 Objetivo del proyecto
 
-La aplicación permite trabajar en modo online y offline gracias al uso de SQLite.
+Desarrollar una aplicación móvil que permita la gestión de notas personales con autenticación segura, almacenamiento remoto mediante API REST y sincronización local offline, aplicando buenas prácticas de desarrollo móvil y arquitectura cliente-servidor.
 
+---
 
+## 🔐 Funcionalidades implementadas
 
-\## Tecnologías utilizadas
+La aplicación incluye:
 
+* registro de usuarios
+* inicio de sesión con autenticación JWT
+* creación de notas
+* edición de notas
+* eliminación de notas
+* visualización de listado de notas
+* persistencia local con SQLite
+* sincronización con servidor cuando hay conexión
+* consumo de API REST (GET, POST, PUT, DELETE)
 
+Estas funcionalidades permiten garantizar disponibilidad de la información tanto online como offline.
+
+---
+
+## 🌐 Arquitectura del sistema
+
+La aplicación está compuesta por dos partes principales:
+
+### Backend
+
+Desarrollado con:
+
+* Node.js
+* Express
+* MySQL
+
+Incluye:
+
+* autenticación con JWT
+* rutas protegidas
+* CRUD completo de notas
+* conexión a base de datos relacional
+
+### Frontend
+
+Desarrollado con:
+
+* Flutter
+* Dart
+
+Incluye:
+
+* interfaz de usuario móvil
+* consumo de API REST
+* almacenamiento local SQLite
+* manejo de sesión del usuario
+
+---
+
+## 🔄 Persistencia local offline
+
+Se implementó almacenamiento local mediante SQLite para permitir:
+
+* acceso a notas sin conexión
+* almacenamiento temporal de información
+* sincronización automática cuando se restablece la conexión
+
+Esto mejora la experiencia del usuario y garantiza disponibilidad de datos.
+
+---
+
+## 🛠️ Tecnologías utilizadas
 
 Frontend:
 
-\- Flutter
-
-\- SQLite
-
-
+* Flutter
+* Dart
+* SQLite
 
 Backend:
 
-\- Node.js
+* Node.js
+* Express
+* MySQL
+* JWT
 
-\- Express
+Herramientas:
 
-\- MySQL
+* Visual Studio Code
+* XAMPP / phpMyAdmin
+* Postman
 
+---
 
+## 📂 Estructura del proyecto Flutter
 
-Autenticación:
+```
+lib/
+ ├── models/
+ ├── services/
+ ├── screens/
+ ├── database/
+ └── main.dart
+```
 
-\- JWT
+---
 
+## ▶️ Cómo ejecutar el proyecto
 
+### Backend
 
-\## Funcionalidades
+Entrar al proyecto backend:
 
+```
+cd notas_backend
+```
 
+Instalar dependencias:
 
-La aplicación permite:
+```
+npm install
+```
 
+Ejecutar servidor:
 
+```
+npm start
+```
 
-\- Registro de usuarios
+Servidor disponible en:
 
-\- Inicio de sesión
+```
+http://localhost:3000
+```
 
-\- Crear notas
+---
 
-\- Editar notas
+### Frontend Flutter
 
-\- Eliminar notas
+Entrar al proyecto:
 
-\- Consultar notas
+```
+cd notas_app_flutter
+```
 
-\- Funcionamiento sin conexión
+Instalar dependencias:
 
-\- Sincronización automática al volver internet
+```
+flutter pub get
+```
 
+Ejecutar aplicación:
 
+```
+flutter run
+```
 
-\## Persistencia local
+---
 
+## 🔑 Seguridad implementada
 
+Se implementaron medidas de seguridad como:
 
-Se utilizó SQLite para guardar notas cuando no hay conexión.
+* autenticación mediante JWT
+* protección de rutas privadas
+* validación de credenciales
+* almacenamiento seguro del token de sesión
 
+Estas medidas garantizan acceso controlado a la información del usuario.
 
+---
 
-Las notas creadas offline quedan como:
+## 👨‍💻 Autor
 
-
-
-Pendiente de sincronizar
-
-
-
-Cuando vuelve la conexión:
-
-
-
-Se sincronizan con el servidor automáticamente.
-
-
-
-\## API REST
-
-
-
-El backend implementa:
-
-
-
-GET /api/notes
-
-POST /api/notes
-
-PUT /api/notes/:id
-
-DELETE /api/notes/:id
-
-
-
-\## Autor
-
-
-
-Germán H
-
+German Hincapié
 Tecnología en Desarrollo de Software
+
 
